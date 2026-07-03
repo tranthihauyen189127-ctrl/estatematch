@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EstateMatch — Đang chuyển hướng...</title>
+
+<!-- ============================================================
+     LINK CỐ ĐỊNH CHO KHÁCH HÀNG (GitHub Pages)
+     ------------------------------------------------------------
+     Khách luôn dùng link GitHub này. Khi bạn deploy bản Apps
+     Script mới, CHỈ CẦN sửa 1 dòng APPS_SCRIPT_URL bên dưới,
+     link khách vẫn giữ nguyên.
+     ============================================================ -->
+<script>
+  // 👉 DÁN URL WEB APP APPS SCRIPT CỦA BẠN VÀO ĐÂY (dạng .../exec)
+  var APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzWlG6XLpdwNYHj0XX2F8JTheIE0nK0_HQ89X7IvvN_nrqiFzX4tx9y9UXjGb2Cl2sb/exec";
+
+  // Tự động chuyển hướng
+  window.location.replace(APPS_SCRIPT_URL);
+</script>
+
+<style>
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    background:linear-gradient(160deg,#e8f0dc 0%,#f2ecd6 55%,#f6eccb 100%);
+    display:flex;align-items:center;justify-content:center;min-height:100vh;color:#0f3d29}
+  .box{text-align:center}
+  .ring{width:38px;height:38px;border:3px solid rgba(15,61,41,.15);border-top-color:#1d9e75;
+    border-radius:50%;animation:s .8s linear infinite;margin:0 auto 16px}
+  @keyframes s{to{transform:rotate(360deg)}}
+  p{font-size:14px;color:#4a5a4f}
+  a{color:#1d9e75}
+</style>
+</head>
+<body>
+  <div class="box">
+    <div class="ring"></div>
+    <p>Đang chuyển đến EstateMatch...</p>
+    <p style="font-size:12px">Nếu không tự chuyển, <a id="fallback" href="#">bấm vào đây</a>.</p>
+  </div>
+  <script>
+    document.getElementById('fallback').href = APPS_SCRIPT_URL;
+  </script>
+</body>
+</html>
